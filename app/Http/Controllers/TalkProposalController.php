@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use DB;
 use App\Models\Tag;
+use Storage;
 
 class TalkProposalController extends Controller
 {

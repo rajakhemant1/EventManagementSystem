@@ -21,7 +21,7 @@ class CreateProposalRevisionsTable extends Migration
             $table->unsignedBigInteger('changed_by');
             $table->timestamps();
         
-            $table->foreign('talk_proposal_id')->references('id')->on('talk_proposals');
+            $table->foreign('talk_proposal_id')->references('id')->on('talk_proposals')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

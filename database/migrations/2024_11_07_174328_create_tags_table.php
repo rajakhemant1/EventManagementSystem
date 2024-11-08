@@ -25,8 +25,8 @@ class CreateTagsTable extends Migration
             $table->unsignedBigInteger('talk_proposal_id');
             $table->timestamps();
         
-            $table->foreign('tag_id')->references('id')->on('tags');
-            $table->foreign('talk_proposal_id')->references('id')->on('talk_proposals');
+            $table->foreign('tag_id')->references('id')->on('tags')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('talk_proposal_id')->references('id')->on('talk_proposals')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

@@ -21,7 +21,7 @@ class CreateTalkProposalsTable extends Migration
             $table->string('file_path')->nullable();
             $table->timestamps();
         
-            $table->foreign('speaker_id')->references('id')->on('speakers');
+            $table->foreign('speaker_id')->references('id')->on('speakers')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

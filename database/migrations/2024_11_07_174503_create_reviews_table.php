@@ -21,8 +21,8 @@ class CreateReviewsTable extends Migration
             $table->integer('rating');
             $table->timestamps();
         
-            $table->foreign('reviewer_id')->references('id')->on('users');
-            $table->foreign('talk_proposal_id')->references('id')->on('talk_proposals');
+            $table->foreign('reviewer_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('talk_proposal_id')->references('id')->on('talk_proposals')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
